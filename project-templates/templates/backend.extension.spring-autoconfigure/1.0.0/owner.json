@@ -1,0 +1,55 @@
+{
+  "templateId": "backend.extension.spring-autoconfigure",
+  "templateVersion": "1.0.0",
+  "status": "candidate",
+  "scope": "BACKEND_EXTENSION",
+  "deliveryType": "BACKEND_EXTENSION_JAR",
+  "owner": {
+    "team": "Backend Platform",
+    "maintainers": ["platform-backend"],
+    "reviewers": ["platform-backend", "project-generation"]
+  },
+  "maintenance": {
+    "sourceOfTruth": "project-templates/templates/backend.extension.spring-autoconfigure/1.0.0",
+    "upgradePolicy": "Template source and qualification evidence are versioned together. Generated qualification artifacts are rebuilt under project-templates/target and are not committed.",
+    "candidateGate": "bash project-templates/scripts/verify-backend-templates.sh --template backend.extension.spring-autoconfigure --qualification --clean --platform-smoke"
+  },
+  "parameterSchema": {
+    "type": "object",
+    "x-ouroboros-project-root": "artifactId",
+    "additionalProperties": false,
+    "required": ["groupId", "artifactId", "version", "packageName"],
+    "properties": {
+      "groupId": {"type": "string", "title": "Maven groupId", "maxLength": 128, "x-ouroboros-format": "java-package"},
+      "artifactId": {"type": "string", "title": "Maven artifactId", "maxLength": 64, "x-ouroboros-format": "maven-artifact-id"},
+      "version": {"type": "string", "title": "项目版本", "default": "0.1.0-SNAPSHOT", "maxLength": 64},
+      "packageName": {"type": "string", "title": "Java 包名", "maxLength": 128, "x-ouroboros-format": "java-package"},
+      "autoConfigurationClassName": {
+        "type": "string",
+        "title": "自动配置类名",
+        "default": "ExtensionAutoConfiguration",
+        "maxLength": 80,
+        "x-ouroboros-format": "java-class-name"
+      }
+    }
+  },
+  "uiHints": [
+    {"parameter": "groupId", "control": "text", "placeholder": "com.example"},
+    {"parameter": "artifactId", "control": "text", "placeholder": "customer-extension"},
+    {"parameter": "version", "control": "text", "placeholder": "0.1.0-SNAPSHOT"},
+    {"parameter": "packageName", "control": "text", "placeholder": "com.example.customer.extension"},
+    {"parameter": "autoConfigurationClassName", "control": "text", "placeholder": "ExtensionAutoConfiguration"}
+  ],
+  "compatibilityMatrix": {
+    "platform": {"declaredRange": "[2.0.0-rc.1,2.0.0)", "testedVersions": ["2.0.0-rc.1-SNAPSHOT"]},
+    "backendRuntime": {"java": "21", "maven": "[3.8.6,4.0.0)", "springBoot": "3.5.11"},
+    "delivery": {
+      "type": "BACKEND_EXTENSION_JAR",
+      "thinJar": true,
+      "packaging": "jar",
+      "mavenPlugins": ["maven-dependency-plugin", "gmavenplus-plugin", "maven-compiler-plugin", "ouroboros-dependency-maven-plugin"],
+      "agentContext": ["AGENTS.md", ".agents/skills/"],
+      "registration": ["AutoConfiguration.imports", "spring.factories"]
+    }
+  }
+}

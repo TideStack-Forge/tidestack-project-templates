@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "x-ouroboros-project-root": "projectName",
+  "additionalProperties": false,
+  "required": ["projectName"],
+  "$ref": "#/$defs/name",
+  "$defs": {
+    "name": {
+      "type": "object"
+    }
+  },
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "title": "Project name",
+      "maxLength": 64
+    }
+  }
+}

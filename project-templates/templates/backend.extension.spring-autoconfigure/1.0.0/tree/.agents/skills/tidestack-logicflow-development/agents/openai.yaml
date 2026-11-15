@@ -1,0 +1,4 @@
+interface:
+  display_name: "逻辑流开发"
+  short_description: "编排自动流程、输入输出、脚本和节点，保留正式执行及失败边界"
+  default_prompt: "使用 $tidestack-logicflow-development 完成相应的 Ouroboros 应用开发任务并验证实际结果。"

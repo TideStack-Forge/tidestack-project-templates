@@ -1,0 +1,40 @@
+const assert = require('node:assert/strict')
+const fs = require('node:fs')
+const path = require('node:path')
+const test = require('node:test')
+
+const projectRoot = path.resolve(__dirname, '..')
+const authFlowSource = fs.readFileSync(path.join(projectRoot, 'src/authFlow.js'), 'utf8')
+const appSource = fs.readFileSync(path.join(projectRoot, 'src/App.vue'), 'utf8')
+const mainSource = fs.readFileSync(path.join(projectRoot, 'src/main.js'), 'utf8')
+const packageJson = JSON.parse(fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8'))
+
+test('declares custom login auth journeys', () => {
+  assert.match(authFlowSource, /submitCredentialLogin/)
+  assert.match(authFlowSource, /submitLdapLogin/)
+  assert.match(authFlowSource, /loginWithLdap/)
+  assert.match(authFlowSource, /startSsoLogin/)
+  assert.match(authFlowSource, /startRedirectLogin/)
+  assert.match(authFlowSource, /CAS/)
+  assert.match(authFlowSource, /OAUTH2/)
+  assert.match(authFlowSource, /OIDC/)
+  assert.match(authFlowSource, /resolveReturnUrl/)
+})
+
+test('keeps i18n and fallback behavior in generated page', () => {
+  assert.match(authFlowSource, /zh-CN/)
+  assert.match(authFlowSource, /en-US/)
+  assert.match(authFlowSource, /fallbackLoginError/)
+  assert.match(appSource, /data-login-state="loading"/)
+  assert.match(appSource, /data-login-state="fallback"/)
+})
+
+test('exports qiankun-compatible login app lifecycle and dependencies', () => {
+  assert.match(mainSource, /export async function bootstrap/)
+  assert.match(mainSource, /export async function mount/)
+  assert.match(mainSource, /export async function update/)
+  assert.match(mainSource, /export async function unmount/)
+  assert.ok(packageJson.dependencies.qiankun)
+  assert.ok(packageJson.dependencies['ouroboros-sdk'])
+  assert.equal(Object.hasOwn(packageJson.dependencies, ['am', 'is'].join('')), false)
+})

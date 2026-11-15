@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java 数据模型"
+  short_description: "指导注解、主键、约束、查询、事务以及插件和装饰器的正确使用"
+  default_prompt: "使用 $tidestack-data-model-development 完成相应的 Ouroboros 应用开发任务并验证实际结果。"

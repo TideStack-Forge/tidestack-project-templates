@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ouroboros.dev/project-templates/contracts/v1/qualification-attestation.schema.json",
+  "title": "Ouroboros Project Template Qualification Attestation v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["attestationVersion", "algorithm", "keyId", "descriptorSha256", "signature"],
+  "properties": {
+    "attestationVersion": {"const": "1"},
+    "algorithm": {"const": "Ed25519"},
+    "keyId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,62}[A-Za-z0-9]$"},
+    "descriptorSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "signature": {"type": "string", "minLength": 16, "maxLength": 512}
+  }
+}

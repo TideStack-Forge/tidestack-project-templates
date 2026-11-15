@@ -1,0 +1,78 @@
+{
+  "templateId": "frontend.micro-app.vue-vite",
+  "templateVersion": "1.0.0",
+  "status": "candidate",
+  "scope": "MICRO_FRONTEND",
+  "deliveryType": "MICRO_FRONTEND_APP",
+  "owner": {
+    "team": "Frontend Platform",
+    "maintainers": [
+      "platform-frontend"
+    ],
+    "reviewers": [
+      "platform-frontend",
+      "project-generation"
+    ]
+  },
+  "maintenance": {
+    "sourceOfTruth": "project-templates/templates/frontend.micro-app.vue-vite/1.0.0",
+    "upgradePolicy": "Template source and qualification evidence are versioned together. Generated qualification artifacts are rebuilt under project-templates/target and are not committed.",
+    "candidateGate": "bash project-templates/scripts/verify-frontend-templates.sh --template frontend.micro-app.vue-vite --qualification --clean"
+  },
+  "parameterSchema": {
+    "type": "object",
+    "x-ouroboros-project-root": "packageName",
+    "additionalProperties": false,
+    "required": ["packageName"],
+    "properties": {
+      "packageName": {
+        "type": "string",
+        "title": "npm 包名",
+        "maxLength": 214,
+        "x-ouroboros-format": "npm-package-name"
+      },
+      "includeExampleRoute": {
+        "type": "boolean",
+        "title": "包含示例路由",
+        "default": true
+      }
+    }
+  },
+  "uiHints": [
+    {
+      "parameter": "packageName",
+      "control": "text",
+      "placeholder": "@your-scope/customer-portal-vue"
+    },
+    {
+      "parameter": "includeExampleRoute",
+      "control": "toggle"
+    }
+  ],
+  "compatibilityMatrix": {
+    "platform": {
+      "declaredRange": "[2.0.0-rc.1,2.0.0)",
+      "testedVersions": [
+        "2.0.0-rc.1-SNAPSHOT"
+      ]
+    },
+    "frontendRuntime": {
+      "vue": "3.5.x",
+      "vite": "8.1.x",
+      "qiankun": "2.10.x",
+      "ouroborosSdk": "1.6.0-beta.6",
+      "node": "20.x || 22.x"
+    },
+    "delivery": {
+      "type": "MICRO_FRONTEND_APP",
+      "bundleFormat": "umd",
+      "publicPath": "runtime-injected",
+      "lifecycle": [
+        "bootstrap",
+        "mount",
+        "update",
+        "unmount"
+      ]
+    }
+  }
+}

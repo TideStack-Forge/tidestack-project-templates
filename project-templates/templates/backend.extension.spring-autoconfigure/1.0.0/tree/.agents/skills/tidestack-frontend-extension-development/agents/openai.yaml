@@ -1,0 +1,4 @@
+interface:
+  display_name: "前端扩展接入"
+  short_description: "指导组件、微前端、布局和登录工程接入、生命周期与构建交付"
+  default_prompt: "使用 $tidestack-frontend-extension-development 完成相应的 Ouroboros 应用开发任务并验证实际结果。"

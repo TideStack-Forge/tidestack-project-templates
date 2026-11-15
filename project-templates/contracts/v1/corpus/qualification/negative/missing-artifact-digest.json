@@ -1,0 +1,28 @@
+{
+  "qualificationDescriptorVersion": "1",
+  "qualificationProfileId": "frontend-stable-v1",
+  "channel": "stable",
+  "scope": "MICRO_FRONTEND",
+  "rowId": "frontend.micro-app.react-webpack-1.0.0-platform-2.0.0",
+  "templateId": "frontend.micro-app.react-webpack",
+  "templateVersion": "1.0.0",
+  "artifact": {
+    "compressedSizeBytes": 1024,
+    "uncompressedSizeBytes": 4096,
+    "manifestSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "compatibility": {
+    "declaredPlatformRange": "[2.0.0,2.1.0)",
+    "testedPlatformVersions": ["2.0.0"],
+    "toolchain": {}
+  },
+  "delivery": {
+    "deliveryType": "MICRO_FRONTEND_APP"
+  },
+  "evidence": [
+    {
+      "name": "clean-build",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ]
+}

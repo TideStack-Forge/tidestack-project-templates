@@ -1,0 +1,4 @@
+interface:
+  display_name: "通知开发"
+  short_description: "定义模板与载荷、接收者、渠道和跳转，验证发送及可靠性边界"
+  default_prompt: "使用 $tidestack-notification-development 完成相应的 Ouroboros 应用开发任务并验证实际结果。"

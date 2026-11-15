@@ -1,0 +1,47 @@
+{
+  "contractVersion": "1",
+  "groups": [
+    {
+      "name": "parameter-contract",
+      "schema": "parameter-contract.schema.json",
+      "positive": [
+        "corpus/parameter/positive/basic.schema.json"
+      ],
+      "negative": [
+        "corpus/parameter/negative/allows-ref.schema.json",
+        "corpus/parameter/negative/missing-project-root.schema.json",
+        "corpus/parameter/negative/nested-object.schema.json"
+      ]
+    },
+    {
+      "name": "catalog",
+      "schema": "catalog.schema.json",
+      "positive": [
+        "corpus/catalog/positive/minimal-catalog.json"
+      ],
+      "negative": [
+        "corpus/catalog/negative/unknown-channel.json"
+      ]
+    },
+    {
+      "name": "qualification-descriptor",
+      "schema": "qualification-descriptor.schema.json",
+      "positive": [
+        "corpus/qualification/positive/minimal-descriptor.json"
+      ],
+      "negative": [
+        "corpus/qualification/negative/missing-artifact-digest.json"
+      ]
+    },
+    {
+      "name": "qualification-attestation",
+      "schema": "qualification-attestation.schema.json",
+      "positive": [
+        "corpus/qualification/positive/minimal-attestation.json"
+      ],
+      "negative": [
+        "corpus/qualification/negative/wrong-algorithm-attestation.json"
+      ]
+    }
+  ]
+}

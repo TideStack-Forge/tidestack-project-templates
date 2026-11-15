@@ -1,0 +1,43 @@
+{
+  "contractVersion": "1",
+  "revision": "cat_1_aaaaaaaaaaaa",
+  "sequence": 1,
+  "issuedAt": "2026-07-30T00:00:00Z",
+  "expiresAt": "2026-08-30T00:00:00Z",
+  "templates": [
+    {
+      "templateId": "frontend.micro-app.react-webpack",
+      "templateVersion": "1.0.0",
+      "scope": "MICRO_FRONTEND",
+      "displayName": "React 微前端应用",
+      "description": "生成 React Webpack 微前端源码项目。",
+      "compatibilityRecords": [
+        {
+          "rowId": "frontend.micro-app.react-webpack-1.0.0-platform-2.0.0",
+          "channel": "candidate",
+          "status": "ACTIVE",
+          "declaredPlatformRange": "[2.0.0,2.1.0)",
+          "testedPlatformVersions": ["2.0.0"],
+          "toolchain": {},
+          "certificationEvidence": {
+            "qualificationProfileId": "frontend-stable-v1",
+            "qualificationDescriptorSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "attestationSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "attestationKeyId": "template-ci-ed25519",
+            "ciRunId": "ci-20260730-0001",
+            "certifiedAt": "2026-07-30T00:00:00Z"
+          }
+        }
+      ],
+      "artifact": {
+        "uri": "https://templates.example.invalid/frontend.micro-app.react-webpack/1.0.0/template.zip",
+        "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "compressedSizeBytes": 1024,
+        "uncompressedSizeBytes": 4096
+      },
+      "delivery": {
+        "deliveryType": "MICRO_FRONTEND_APP"
+      }
+    }
+  ]
+}

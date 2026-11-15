@@ -1,0 +1,42 @@
+.ouroboros-micro-app {
+  color: #1f2937;
+  display: grid;
+  gap: 24px;
+  padding: 32px;
+}
+
+.ouroboros-micro-app__hero {
+  background: linear-gradient(135deg, #42b883 0%, #35495e 100%);
+  border-radius: 16px;
+  color: #ffffff;
+  padding: 32px;
+}
+
+.ouroboros-micro-app__eyebrow {
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  opacity: 0.78;
+  text-transform: uppercase;
+}
+
+.ouroboros-micro-app__hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.ouroboros-micro-app__panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
+  padding: 24px;
+}
+
+.ouroboros-micro-app__panel pre {
+  background: #111827;
+  border-radius: 8px;
+  color: #d1fae5;
+  overflow: auto;
+  padding: 16px;
+}

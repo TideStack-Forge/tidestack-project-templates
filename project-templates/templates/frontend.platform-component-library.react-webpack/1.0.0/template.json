@@ -1,0 +1,20 @@
+{
+  "contractVersion": "2",
+  "templateId": "frontend.platform-component-library.react-webpack",
+  "templateVersion": "1.0.0",
+  "operations": [
+    {"kind": "copy", "source": "tree/.gitignore", "target": ".gitignore"},
+    {"kind": "copy", "source": "tree/babel.config.js", "target": "babel.config.js"},
+    {"kind": "copy", "source": "tree/public/index.html", "target": "public/index.html"},
+    {"kind": "copy", "source": "tree/src/components/PlatformCard.jsx", "target": "src/components/PlatformCard.jsx"},
+    {"kind": "copy", "source": "tree/src/components/PlatformInput.jsx", "target": "src/components/PlatformInput.jsx"},
+    {"kind": "render", "source": "tree/README.md.ftl", "target": "README.md", "contentType": "text/markdown"},
+    {"kind": "copy", "source": "tree/AGENTS.md", "target": "AGENTS.md"},
+    {"kind": "render", "source": "tree/package.json.ftl", "target": "package.json", "contentType": "application/json"},
+    {"kind": "render", "source": "tree/webpack.config.js.ftl", "target": "webpack.config.js", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/components.manifest.json.ftl", "target": "components.manifest.json", "contentType": "application/json"},
+    {"kind": "render", "source": "tree/manage.json.ftl", "target": "manage.json", "contentType": "application/json"},
+    {"kind": "render", "source": "tree/src/index.jsx.ftl", "target": "src/index.jsx", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/tests/platform-library-contract.test.cjs.ftl", "target": "tests/platform-library-contract.test.cjs", "contentType": "application/javascript"}
+  ]
+}

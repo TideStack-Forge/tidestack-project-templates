@@ -1,0 +1,27 @@
+{
+  "modelType": "default",
+  "formatVersion": "2.0",
+  "namespace": "sales",
+  "name": "Order",
+  "title": "订单",
+  "isEnabled": true,
+  "fields": [
+    {"name": "id", "type": "String", "isPrimaryKey": true, "isRequired": true},
+    {"name": "orderNo", "type": "String", "isRequired": true}
+  ],
+  "actions": [{
+    "name": "submit",
+    "title": "提交订单",
+    "isEnabled": true,
+    "readOnly": false,
+    "inputSchema": {
+      "type": "object", "required": ["data"], "additionalProperties": false,
+      "properties": {"data": {
+        "type": "object", "required": ["orderId"], "additionalProperties": false,
+        "properties": {"orderId": {"type": "string", "minLength": 1}}
+      }}
+    },
+    "outputSchema": {"type": "object", "required": ["orderId"], "properties": {"orderId": {"type": "string"}}},
+    "binding": {"kind": "handler", "handlerName": "submitOrderHandler"}
+  }]
+}

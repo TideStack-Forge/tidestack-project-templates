@@ -1,0 +1,18 @@
+{
+  "contractVersion": "2",
+  "templateId": "frontend.login.react-webpack",
+  "templateVersion": "0.1.0",
+  "operations": [
+    {"kind": "copy", "source": "tree/.gitignore", "target": ".gitignore"},
+    {"kind": "copy", "source": "tree/babel.config.js", "target": "babel.config.js"},
+    {"kind": "copy", "source": "tree/public/index.html", "target": "public/index.html"},
+    {"kind": "render", "source": "tree/README.md.ftl", "target": "README.md", "contentType": "text/markdown"},
+    {"kind": "copy", "source": "tree/AGENTS.md", "target": "AGENTS.md"},
+    {"kind": "render", "source": "tree/package.json.ftl", "target": "package.json", "contentType": "application/json"},
+    {"kind": "render", "source": "tree/webpack.config.js.ftl", "target": "webpack.config.js", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/authFlow.js.ftl", "target": "src/authFlow.js", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/LoginPage.jsx.ftl", "target": "src/LoginPage.jsx", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/main.jsx.ftl", "target": "src/main.jsx", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/tests/login-contract.test.cjs.ftl", "target": "tests/login-contract.test.cjs", "contentType": "application/javascript"}
+  ]
+}

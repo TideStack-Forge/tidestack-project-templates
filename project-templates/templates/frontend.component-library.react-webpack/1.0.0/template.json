@@ -1,0 +1,18 @@
+{
+  "contractVersion": "2",
+  "templateId": "frontend.component-library.react-webpack",
+  "templateVersion": "1.0.0",
+  "operations": [
+    {"kind": "copy", "source": "tree/.gitignore", "target": ".gitignore"},
+    {"kind": "copy", "source": "tree/babel.config.js", "target": "babel.config.js"},
+    {"kind": "copy", "source": "tree/public/index.html", "target": "public/index.html"},
+    {"kind": "copy", "source": "tree/src/components/SampleRenderer.jsx", "target": "src/components/SampleRenderer.jsx"},
+    {"kind": "copy", "source": "tree/src/components/SampleFormItem.jsx", "target": "src/components/SampleFormItem.jsx"},
+    {"kind": "render", "source": "tree/README.md.ftl", "target": "README.md", "contentType": "text/markdown"},
+    {"kind": "copy", "source": "tree/AGENTS.md", "target": "AGENTS.md"},
+    {"kind": "render", "source": "tree/package.json.ftl", "target": "package.json", "contentType": "application/json"},
+    {"kind": "render", "source": "tree/webpack.config.js.ftl", "target": "webpack.config.js", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/index.jsx.ftl", "target": "src/index.jsx", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/tests/component-library-contract.test.cjs.ftl", "target": "tests/component-library-contract.test.cjs", "contentType": "application/javascript"}
+  ]
+}

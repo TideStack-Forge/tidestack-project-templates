@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tidestack.dev/docs/reference/jsonschema/metadata/rpc.schema.json",
+  "title": "RPC 模型",
+  "description": "声明平台如何调用外部系统；type 选择协议实现，authCredential 引用独立认证资源，request 保存协议专有请求配置。",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "name",
+    "title",
+    "type"
+  ],
+  "properties": {
+    "group": {
+      "type": "string",
+      "description": "按外部系统或用途组织 RPC 模型的分组。"
+    },
+    "name": {
+      "type": "string",
+      "description": "RPC 调用定义的名称，供逻辑流和代码引用。"
+    },
+    "title": {
+      "type": "string",
+      "description": "供开发界面或页面展示的标题。"
+    },
+    "type": {
+      "type": "string",
+      "description": "协议调用实现的标识，支持已接入的自定义协议类型。"
+    },
+    "description": {
+      "type": "string",
+      "description": "说明该定义的用途、业务含义或使用条件。"
+    },
+    "isEnabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否启用该定义。"
+    },
+    "authCredential": {
+      "type": "string",
+      "description": "凭据名称或 #{key} 配置引用；运行时解析后查找凭据。"
+    },
+    "request": {
+      "type": "object",
+      "description": "执行配置项支持 #{key}；URL 与参数值额外支持 ${...} 和旧式 $path；先解析结构配置再转换类型。"
+    },
+    "inputSchema": {
+      "type": "object",
+      "description": "输入结构的可选 JSON Schema，用于静态代码提示，不改变运行时校验。"
+    },
+    "outputSchema": {
+      "type": "object",
+      "description": "输出结构的可选 JSON Schema，用于静态代码提示，不改变运行时校验。"
+    },
+    "timeout": {
+      "type": [
+        "integer",
+        "string"
+      ],
+      "description": "超时毫秒数，允许 #{key} 配置引用，解析结果必须为整数。"
+    },
+    "retry": {
+      "type": [
+        "integer",
+        "string"
+      ],
+      "description": "重试次数，允许 #{key} 配置引用，解析结果必须为整数。"
+    }
+  },
+  "$comment": "Source: ability/ouroboros-rpc-model/ouroboros-rpc-model-core/src/main/java/com/ouroboros/rpc/metadata/RPCModelMetadata.java"
+}

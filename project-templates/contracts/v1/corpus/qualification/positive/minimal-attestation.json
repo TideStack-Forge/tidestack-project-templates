@@ -1,0 +1,7 @@
+{
+  "attestationVersion": "1",
+  "algorithm": "Ed25519",
+  "keyId": "template-ci-ed25519",
+  "descriptorSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "signature": "YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo="
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "RPC 外部集成"
+  short_description: "配置出站调用与认证，验证参数、超时、重试、幂等和失败契约"
+  default_prompt: "使用 $tidestack-rpc-integration 完成相应的 Ouroboros 应用开发任务并验证实际结果。"

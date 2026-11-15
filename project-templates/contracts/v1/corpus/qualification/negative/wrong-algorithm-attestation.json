@@ -1,0 +1,7 @@
+{
+  "attestationVersion": "1",
+  "algorithm": "RSA",
+  "keyId": "template-ci-rsa",
+  "descriptorSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "signature": "YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo="
+}

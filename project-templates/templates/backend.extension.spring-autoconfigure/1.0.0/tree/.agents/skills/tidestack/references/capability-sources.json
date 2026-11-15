@@ -1,0 +1,24 @@
+{
+  "baseline": "dev-next@4b525ad61456db1f80f09235765acd93f136b472",
+  "source": {
+    "revision": "e757b2d04fc21d784cf778c04d58c7b790eb0a7d",
+    "basis": "working-tree",
+    "verification": "source-reviewed",
+    "runtimeVerified": false
+  },
+  "count": 107,
+  "entries": [
+    {
+      "source": "docs/handbook/static/capabilities/index.json",
+      "sha256": "7ab1ffd8432219b0b63d3e1ff6cb21099d8500be782c3d181a0c0f24ae32ae48"
+    },
+    {
+      "source": "docs/handbook/static/capabilities/catalog.json",
+      "sha256": "dacd0574f205ba5977220e9353e58874c011f88d0bc59c5d654cb28718d9a94d"
+    },
+    {
+      "source": "docs/handbook/static/capabilities/catalog.schema.json",
+      "sha256": "3f2c347de1f19b23887d08520f3b3eb70bdf5eece881dc53f68a3d5360d720f8"
+    }
+  ]
+}

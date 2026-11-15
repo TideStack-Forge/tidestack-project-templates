@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "x-ouroboros-project-root": "projectName",
+  "additionalProperties": false,
+  "required": ["projectName"],
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "title": "Project name",
+      "maxLength": 64
+    },
+    "nested": {
+      "type": "object",
+      "title": "Nested options",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

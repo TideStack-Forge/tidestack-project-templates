@@ -1,0 +1,4 @@
+interface:
+  display_name: "访问控制开发"
+  short_description: "定义行列范围、扩展解析和配置控件，在实际查询与写入中消费"
+  default_prompt: "使用 $tidestack-access-control-development 完成相应的 Ouroboros 应用开发任务并验证实际结果。"

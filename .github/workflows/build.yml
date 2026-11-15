@@ -1,0 +1,24 @@
+name: Verify templates
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: project-templates
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: project-templates/package-lock.json
+      - run: npm ci
+      - run: PROJECT_TEMPLATES_NODE_MODULES="$PWD/node_modules" bash scripts/verify-frontend-templates.sh --qualification --clean
+      - run: bash scripts/verify-backend-templates.sh --qualification --clean
+      - run: bash scripts/verify-template-publication.sh --clean

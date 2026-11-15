@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "x-ouroboros-project-root": "projectName",
+  "additionalProperties": false,
+  "required": ["projectName", "packageName"],
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "title": "Project name",
+      "maxLength": 64,
+      "x-ouroboros-format": "path-segment"
+    },
+    "packageName": {
+      "type": "string",
+      "title": "Package name",
+      "maxLength": 214,
+      "x-ouroboros-format": "npm-package-name"
+    },
+    "includeExample": {
+      "type": "boolean",
+      "title": "Include example",
+      "default": true
+    }
+  }
+}

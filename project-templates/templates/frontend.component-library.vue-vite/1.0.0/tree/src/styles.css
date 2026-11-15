@@ -1,0 +1,26 @@
+.ouroboros-component-renderer {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
+  color: #1f2937;
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.ouroboros-component-renderer pre {
+  background: #111827;
+  border-radius: 8px;
+  color: #d1fae5;
+  overflow: auto;
+  padding: 12px;
+}
+
+.ouroboros-component-input {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  color: #1f2937;
+  font: inherit;
+  padding: 10px 12px;
+}

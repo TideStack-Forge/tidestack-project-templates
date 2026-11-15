@@ -1,0 +1,19 @@
+{
+  "contractVersion": "2",
+  "templateId": "frontend.layout.vue-vite",
+  "templateVersion": "1.0.0",
+  "operations": [
+    {"kind": "copy", "source": "tree/.gitignore", "target": ".gitignore"},
+    {"kind": "copy", "source": "tree/public/index.html", "target": "public/index.html"},
+    {"kind": "copy", "source": "tree/src/styles.css", "target": "src/styles.css"},
+    {"kind": "render", "source": "tree/README.md.ftl", "target": "README.md", "contentType": "text/markdown"},
+    {"kind": "copy", "source": "tree/AGENTS.md", "target": "AGENTS.md"},
+    {"kind": "render", "source": "tree/package.json.ftl", "target": "package.json", "contentType": "application/json"},
+    {"kind": "render", "source": "tree/vite.config.mjs.ftl", "target": "vite.config.mjs", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/layout-entry.js.ftl", "target": "src/layout-entry.js", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/createLayoutParcel.js.ftl", "target": "src/createLayoutParcel.js", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/components/Topbar.vue.ftl", "target": "src/components/Topbar.vue", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/src/components/Sidebar.vue.ftl", "target": "src/components/Sidebar.vue", "contentType": "application/javascript"},
+    {"kind": "render", "source": "tree/tests/layout-parcels-contract.test.cjs.ftl", "target": "tests/layout-parcels-contract.test.cjs", "contentType": "application/javascript"}
+  ]
+}

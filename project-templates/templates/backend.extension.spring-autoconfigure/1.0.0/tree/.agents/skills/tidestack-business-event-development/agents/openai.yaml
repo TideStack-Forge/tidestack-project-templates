@@ -1,0 +1,4 @@
+interface:
+  display_name: "业务事件开发"
+  short_description: "定义事实、订阅、事务及执行身份，处理可靠交付、重试和幂等"
+  default_prompt: "使用 $tidestack-business-event-development 完成相应的 Ouroboros 应用开发任务并验证实际结果。"
