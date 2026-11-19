@@ -53,6 +53,6 @@ mvn -DskipTests package
 
 ## 应用开发 Skills
 
-本项目在 `.agents/skills/` 分发 17 个公共任务，源自平台公共套件。先选型时用[只读专家](.agents/skills/tidestack/SKILL.md)，它只判断并推荐后续任务。明确实施需求后直接使用[业务模型](.agents/skills/tidestack-business-model-development/SKILL.md)、[数据模型](.agents/skills/tidestack-data-model-development/SKILL.md)、[Web 授权](.agents/skills/tidestack-web-authorization/SKILL.md)、[访问控制](.agents/skills/tidestack-access-control-development/SKILL.md)、[业务入口](.agents/skills/tidestack-business-entry-definition/SKILL.md)、[UI Schema](.agents/skills/tidestack-ui-schema-development/SKILL.md)等专项入口。资源契约与工具见[metadata](.agents/skills/tidestack-metadata-definition/SKILL.md)，环境联调见[local-debugging](.agents/skills/tidestack-local-debugging/SKILL.md)。
+本项目在 `.agents/skills/` 分发 17 个公共任务，源自平台公共套件。先选型时用[只读专家](.agents/skills/tidestack-howto/SKILL.md)，它只判断并推荐后续任务。明确实施需求后直接使用[业务模型](.agents/skills/tidestack-business-model-development/SKILL.md)、[数据模型](.agents/skills/tidestack-data-model-development/SKILL.md)、[Web 授权](.agents/skills/tidestack-web-authorization/SKILL.md)、[访问控制](.agents/skills/tidestack-access-control-development/SKILL.md)、[业务入口](.agents/skills/tidestack-business-entry-definition/SKILL.md)、[UI Schema](.agents/skills/tidestack-ui-schema-development/SKILL.md)等专项入口。资源契约与工具见[metadata](.agents/skills/tidestack-metadata-definition/SKILL.md)，环境联调见[local-debugging](.agents/skills/tidestack-local-debugging/SKILL.md)。
 
 异常沿平台 BusinessException/ValidationException/InternalException/PlatformException 与统一错误码出口；按业务语义和处理需求定义类型，不吞失败或为每条提示创建空类型。

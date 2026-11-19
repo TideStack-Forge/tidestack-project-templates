@@ -1,5 +1,17 @@
 # 方法注解与授权契约
 
+## 先选择接口契约
+
+先查实际路由以及已有 `.authority.json` 的 `apis` 绑定；已有配置可以继续使用，不要求把全部接口迁成注解。
+
+| 访问契约 | 方法声明 | 应用侧含义 |
+| --- | --- | --- |
+| 指定权限 | `@Authority("warehouse.stock.read")` | 绑定真实权限并由角色授予；数组为任一匹配权限获准，不是 AND |
+| 已认证的平台用户均可访问 | `jakarta.annotation.security.PermitAll` | 当前平台凭据路径可跳过权限匹配；仍需登录，且不代表委托/受限凭据一概放行 |
+| 明确公开访问 | `@Anonymous` | 允许匿名请求，仅用于业务确实公开的接口 |
+
+这些声明放在实际映射方法上，不混用。PermitAll 不能替代 Anonymous；公开签名回调等入口仍按协议完成其专门认证和校验，不能借匿名注解省略。
+
 ## 注解用法
 
 ```java
@@ -21,7 +33,7 @@ public WarehouseView get(@PathVariable String id) {
 
 ## 权限定义与授予
 
-`AnnotationAuthorityProvider` 在元数据刷新后收集方法注解，按权限完整名合并真实 API。JSON 资源、程序化 `AuthorityProvider` 和注解定义均进入 `AuthorityCenter`，同名资源经正式合并机制组合；它们不是彼此独立的授权系统。
+方法注解和已有资源绑定沿同一平台权限机制生效。同一路由可能匹配多项权限，新增绑定时检查原有资源；不要通过添加宽泛权限改变原接口的访问范围。
 
 注解只提供权限到 API 的关联。显示标题、模块归属、UI/菜单引用和数据控制定义按现有资源维护，角色还必须授予该权限。名称保持一致，不能依赖某个提供器的大小写宽容来混写标识。
 
@@ -47,6 +59,7 @@ typed 数据模型并不自动套用这些结果。查询将用户搜索条件�
 
 - `ouroboros-web-security-annotation/.../security/annotation/{Authority,Anonymous}.java`
 - `ouroboros-web-security-rbac-manage/.../rbac/provider/{AnnotationAuthorityProvider,SpringBeanAuthorityProvider}.java`
+- `ouroboros-web-security-runtime/.../authorize/AnnotationAnyAuthenticationApiProvider.java`
 - `ouroboros-web-security-runtime/.../authorize/filter/AuthorizeCheckFilterSupplier.java`
 - `ouroboros-web-security-core/.../{authority/AuthorityCenter,authorize/AuthorizationEvaluator,authentication/OuroborosAuthentication,context/CurrentSecurityContextHolder}.java`
 

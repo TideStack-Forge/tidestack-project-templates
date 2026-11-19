@@ -8,4 +8,6 @@ IDEA 与 spring-boot:run 的 working directory/config location 可能不同。�
 
 验证链：构建产物中的资源/配置 → 应用启动 → loader/扫描/模型刷新 → 真实接口与数据操作 → 权限负向 → 页面交互。health=UP、端口打开、返回401和编译通过各只证明一部分。
 
-涉及事务、约束、RPC 或通知的行为测试使用隔离实例和测试接收者。重启/失败时保留最先异常及日志位置，不删除他人进程、数据卷或生成的部署制品。平台维护的 run-tests/operate-ouroboros 只在具有对应 monorepo 脚本时使用，不要求普通消费项目安装它们。
+涉及事务、约束、RPC 或通知的行为测试使用隔离实例和测试接收者。重启/失败时保留最先异常及日志位置，不删除他人进程、数据卷或生成的部署制品。使用应用已有的启动、日志和测试入口，不依赖平台维护专用 Skill 或内部反馈脚本。
+
+UI 修改未生效时核对实际 Schema 响应、同路径在线资源、打包版本和刷新情况，见[页面交互验证](../../tidestack-ui-schema-development/references/interaction-checks.md)；不直接修改平台 Provider 或缓存实现。

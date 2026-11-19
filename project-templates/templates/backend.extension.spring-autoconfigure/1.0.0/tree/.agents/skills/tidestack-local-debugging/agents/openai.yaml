@@ -1,4 +1,4 @@
 interface:
   display_name: "应用本地联调"
-  short_description: "发现环境并隔离配置，启动前后端联调、验证关键路径与清理资源"
+  short_description: "复用应用已有环境与启动入口，按需运行前端基座并验证关键路径"
   default_prompt: "使用 $tidestack-local-debugging 完成相应的 Ouroboros 应用开发任务并验证实际结果。"

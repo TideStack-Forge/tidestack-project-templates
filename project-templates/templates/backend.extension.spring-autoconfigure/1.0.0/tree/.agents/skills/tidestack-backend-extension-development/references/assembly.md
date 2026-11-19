@@ -6,6 +6,8 @@
 | 平台托管扩展 | 普通库 JAR，平台已有依赖按官方模板 provided；不把 Boot fat JAR 作为扩展上传；仅此路径按目标 manifest 使用依赖过滤插件 |
 | 已有业务模块 | 沿已有构建和所有权添加实现，不为局部功能另建装配框架 |
 
+仅在新增或调整配置入口时核对以下注册契约；在已加载模块里增加普通业务 Bean，无需重建这些入口。
+
 Spring Boot 3 自动配置使用 `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`；目标 Ouroboros 的扩展模板同时保留 `META-INF/spring.factories` 注册同一配置。核对实际加载器需要哪些入口，不把两份注册当成两套初始化。普通 Spring Bean 通过已有扫描或配置导入。
 
 SPI 文件 `META-INF/services/<接口完整名>` 每行一个可实例化实现。需要 Spring 服务的实例应使用正式桥接，不能假设 ServiceLoader 自动注入。外部认证 Builder 是 Spring 集合装配的例子，不应因为叫“插件”就编造 SPI。

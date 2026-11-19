@@ -45,51 +45,6 @@
     },
     {
       "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/SKILL.md",
-      "target": ".agents/skills/tidestack/SKILL.md"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/agents/openai.yaml",
-      "target": ".agents/skills/tidestack/agents/openai.yaml"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/references/capability-map.md",
-      "target": ".agents/skills/tidestack/references/capability-map.md"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/references/capability-sources.json",
-      "target": ".agents/skills/tidestack/references/capability-sources.json"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/references/catalog.json",
-      "target": ".agents/skills/tidestack/references/catalog.json"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/references/catalog.schema.json",
-      "target": ".agents/skills/tidestack/references/catalog.schema.json"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/references/decision-guide.md",
-      "target": ".agents/skills/tidestack/references/decision-guide.md"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/references/index.json",
-      "target": ".agents/skills/tidestack/references/index.json"
-    },
-    {
-      "kind": "copy",
-      "source": "tree/.agents/skills/tidestack/scripts/query_capabilities.py",
-      "target": ".agents/skills/tidestack/scripts/query_capabilities.py"
-    },
-    {
-      "kind": "copy",
       "source": "tree/.agents/skills/tidestack-access-control-development/SKILL.md",
       "target": ".agents/skills/tidestack-access-control-development/SKILL.md"
     },
@@ -112,6 +67,21 @@
       "kind": "copy",
       "source": "tree/.agents/skills/tidestack-approval-integration/agents/openai.yaml",
       "target": ".agents/skills/tidestack-approval-integration/agents/openai.yaml"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-approval-integration/examples/purchase.approval-form.json",
+      "target": ".agents/skills/tidestack-approval-integration/examples/purchase.approval-form.json"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-approval-integration/examples/purchase.workflow.json",
+      "target": ".agents/skills/tidestack-approval-integration/examples/purchase.workflow.json"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-approval-integration/references/business-integration.md",
+      "target": ".agents/skills/tidestack-approval-integration/references/business-integration.md"
     },
     {
       "kind": "copy",
@@ -240,6 +210,51 @@
     },
     {
       "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/SKILL.md",
+      "target": ".agents/skills/tidestack-howto/SKILL.md"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/agents/openai.yaml",
+      "target": ".agents/skills/tidestack-howto/agents/openai.yaml"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/references/capability-map.md",
+      "target": ".agents/skills/tidestack-howto/references/capability-map.md"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/references/capability-sources.json",
+      "target": ".agents/skills/tidestack-howto/references/capability-sources.json"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/references/catalog.json",
+      "target": ".agents/skills/tidestack-howto/references/catalog.json"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/references/catalog.schema.json",
+      "target": ".agents/skills/tidestack-howto/references/catalog.schema.json"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/references/decision-guide.md",
+      "target": ".agents/skills/tidestack-howto/references/decision-guide.md"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/references/index.json",
+      "target": ".agents/skills/tidestack-howto/references/index.json"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-howto/scripts/query_capabilities.py",
+      "target": ".agents/skills/tidestack-howto/scripts/query_capabilities.py"
+    },
+    {
+      "kind": "copy",
       "source": "tree/.agents/skills/tidestack-local-debugging/SKILL.md",
       "target": ".agents/skills/tidestack-local-debugging/SKILL.md"
     },
@@ -295,11 +310,6 @@
     },
     {
       "kind": "copy",
-      "source": "tree/.agents/skills/tidestack-metadata-definition/authoring/ui-schema.schema.json",
-      "target": ".agents/skills/tidestack-metadata-definition/authoring/ui-schema.schema.json"
-    },
-    {
-      "kind": "copy",
       "source": "tree/.agents/skills/tidestack-metadata-definition/references/app-metadata.schema.json",
       "target": ".agents/skills/tidestack-metadata-definition/references/app-metadata.schema.json"
     },
@@ -307,6 +317,11 @@
       "kind": "copy",
       "source": "tree/.agents/skills/tidestack-metadata-definition/references/app-module.schema.json",
       "target": ".agents/skills/tidestack-metadata-definition/references/app-module.schema.json"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-metadata-definition/references/approval-form.schema.json",
+      "target": ".agents/skills/tidestack-metadata-definition/references/approval-form.schema.json"
     },
     {
       "kind": "copy",
@@ -542,6 +557,11 @@
       "kind": "copy",
       "source": "tree/.agents/skills/tidestack-ui-schema-development/agents/openai.yaml",
       "target": ".agents/skills/tidestack-ui-schema-development/agents/openai.yaml"
+    },
+    {
+      "kind": "copy",
+      "source": "tree/.agents/skills/tidestack-ui-schema-development/references/composition-and-routing.md",
+      "target": ".agents/skills/tidestack-ui-schema-development/references/composition-and-routing.md"
     },
     {
       "kind": "copy",

@@ -1,4 +1,0 @@
-interface:
-  display_name: "开发选型专家"
-  short_description: "只读评估需求、平台能力、实现边界与资源清单，推荐后续开发任务"
-  default_prompt: "使用 $tidestack 只读分析需求并给出能力选型与资源清单。"

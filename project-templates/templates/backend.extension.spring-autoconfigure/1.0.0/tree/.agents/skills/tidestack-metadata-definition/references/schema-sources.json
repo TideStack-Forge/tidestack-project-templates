@@ -1,112 +1,113 @@
 {
-  "baseline": "dev-next@c3ff6111937767f373392c24fda9f698bc48c068",
-  "source": "docs/handbook/docs/reference/jsonschema/metadata",
-  "sourceOverrides": {
-    "logicflow.schema.json": "metadata-schema/logicflow.schema.json",
-    "rpc.schema.json": "metadata-schema/rpc.schema.json",
-    "rpc-auth.schema.json": "metadata-schema/rpc-auth.schema.json"
-  },
-  "count": 31,
+  "source": "metadata-schema",
+  "count": 32,
+  "schemaCount": 33,
   "entries": [
     {
       "schema": "app-metadata.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/app-metadata.schema.json",
+      "source": "metadata-schema/app-metadata.schema.json",
       "sourceSha256": "ff0f54fa4ed442d37b8df7a49b8e7bc53f6d681a030c0c123798422ce92bad5d",
       "distributedSha256": "ff0f54fa4ed442d37b8df7a49b8e7bc53f6d681a030c0c123798422ce92bad5d"
     },
     {
       "schema": "app-module.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/app-module.schema.json",
+      "source": "metadata-schema/app-module.schema.json",
       "sourceSha256": "fa01f028b86f537e0ee930a53559beab1257f6e3264596767c922b6e2729b66b",
       "distributedSha256": "fa01f028b86f537e0ee930a53559beab1257f6e3264596767c922b6e2729b66b"
     },
     {
+      "schema": "approval-form.schema.json",
+      "source": "metadata-schema/approval-form.schema.json",
+      "sourceSha256": "98f692acbbd1309ac2d7666404ae7f4be077fcfbc3a9263b9daff5b0d924c0f4",
+      "distributedSha256": "98f692acbbd1309ac2d7666404ae7f4be077fcfbc3a9263b9daff5b0d924c0f4"
+    },
+    {
       "schema": "approval-workflow.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/approval-workflow.schema.json",
+      "source": "metadata-schema/approval-workflow.schema.json",
       "sourceSha256": "2ddff89046e66a200095ca35004ff37e0872a95eb3f6ef84d8b20d2e10f362e2",
       "distributedSha256": "2ddff89046e66a200095ca35004ff37e0872a95eb3f6ef84d8b20d2e10f362e2"
     },
     {
       "schema": "authority.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/authority.schema.json",
+      "source": "metadata-schema/authority.schema.json",
       "sourceSha256": "3251e6668f60fbfe1e61793d660f3f80773527e4739fcbf810d73926a5331978",
       "distributedSha256": "3251e6668f60fbfe1e61793d660f3f80773527e4739fcbf810d73926a5331978"
     },
     {
       "schema": "business-log.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/business-log.schema.json",
+      "source": "metadata-schema/business-log.schema.json",
       "sourceSha256": "8ed790d087a1f55e699b70c08d866499bb8eaf8d0349ca63ecfce7a66e41e0c1",
       "distributedSha256": "8ed790d087a1f55e699b70c08d866499bb8eaf8d0349ca63ecfce7a66e41e0c1"
     },
     {
       "schema": "business.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/business.schema.json",
+      "source": "metadata-schema/business.schema.json",
       "sourceSha256": "0013118a9df5bb9c138b714f327a0d48200f6e9b259792f1743ae3619c3f498e",
       "distributedSha256": "0013118a9df5bb9c138b714f327a0d48200f6e9b259792f1743ae3619c3f498e"
     },
     {
       "schema": "configuration-group-item.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/configuration-group-item.schema.json",
+      "source": "metadata-schema/configuration-group-item.schema.json",
       "sourceSha256": "2f8b31ff837e5b5408a19d828807a720d87b5aefb827596b2c4b3bd793349731",
       "distributedSha256": "2f8b31ff837e5b5408a19d828807a720d87b5aefb827596b2c4b3bd793349731"
     },
     {
       "schema": "configuration-group.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/configuration-group.schema.json",
+      "source": "metadata-schema/configuration-group.schema.json",
       "sourceSha256": "c645b10259bc1908b0dca4d39c57c0e91e783d8bc3665f0eef255c9c65834750",
       "distributedSha256": "c645b10259bc1908b0dca4d39c57c0e91e783d8bc3665f0eef255c9c65834750"
     },
     {
       "schema": "configuration-item.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/configuration-item.schema.json",
-      "sourceSha256": "32118372b9938460c21f3554a95fc8715a3a19e890a2c8228280c77d486291e2",
-      "distributedSha256": "32118372b9938460c21f3554a95fc8715a3a19e890a2c8228280c77d486291e2"
+      "source": "metadata-schema/configuration-item.schema.json",
+      "sourceSha256": "e5c0a60332d28026594455e1a10aa50b8c04f5faa4d6306e38a5be5ff510138d",
+      "distributedSha256": "e5c0a60332d28026594455e1a10aa50b8c04f5faa4d6306e38a5be5ff510138d"
     },
     {
       "schema": "configuration.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/configuration.schema.json",
-      "sourceSha256": "5441ddfe64e9c1264c3daf0eed62e97ea41544b23bc5c465157797edc1da351e",
-      "distributedSha256": "5441ddfe64e9c1264c3daf0eed62e97ea41544b23bc5c465157797edc1da351e"
+      "source": "metadata-schema/configuration.schema.json",
+      "sourceSha256": "dd22f441dd0adbf6c542ef7f490b326fc6a567cca66d9a0e2fb9da5e07687f80",
+      "distributedSha256": "dd22f441dd0adbf6c542ef7f490b326fc6a567cca66d9a0e2fb9da5e07687f80"
     },
     {
       "schema": "data-dict.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/data-dict.schema.json",
+      "source": "metadata-schema/data-dict.schema.json",
       "sourceSha256": "6d60da85609611ec1fbd5f350162e42ea85a33976d3fe2fe86cb7bea408c2b21",
       "distributedSha256": "6d60da85609611ec1fbd5f350162e42ea85a33976d3fe2fe86cb7bea408c2b21"
     },
     {
       "schema": "data-init.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/data-init.schema.json",
+      "source": "metadata-schema/data-init.schema.json",
       "sourceSha256": "8506865781f8de1bff9ba6c63f1a378ef12d4f569520550e4de5f2225d2e2d4c",
       "distributedSha256": "8506865781f8de1bff9ba6c63f1a378ef12d4f569520550e4de5f2225d2e2d4c"
     },
     {
       "schema": "dev-menu.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/dev-menu.schema.json",
+      "source": "metadata-schema/dev-menu.schema.json",
       "sourceSha256": "5944a907652d49f8a864e4bf995f2da4125bcb9968dda8a1a7b959c4d1d4b456",
       "distributedSha256": "5944a907652d49f8a864e4bf995f2da4125bcb9968dda8a1a7b959c4d1d4b456"
     },
     {
       "schema": "error-code.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/error-code.schema.json",
+      "source": "metadata-schema/error-code.schema.json",
       "sourceSha256": "c7d8088586899ad4b2534a42c3cd6c03cffe88a3c0433936acc71b7e26cfe81d",
       "distributedSha256": "c7d8088586899ad4b2534a42c3cd6c03cffe88a3c0433936acc71b7e26cfe81d"
     },
     {
       "schema": "field-type.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/field-type.schema.json",
+      "source": "metadata-schema/field-type.schema.json",
       "sourceSha256": "550c5f7c4787a34b43691e454ef640e84a71aff1b1ff85bc7866c71ed747c99d",
       "distributedSha256": "550c5f7c4787a34b43691e454ef640e84a71aff1b1ff85bc7866c71ed747c99d"
     },
     {
       "schema": "flow-node.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/flow-node.schema.json",
+      "source": "metadata-schema/flow-node.schema.json",
       "sourceSha256": "f7ad6f50953eaf28516c79466fb4bef44993a0c75988a2148c7453a9e7ed15c8",
       "distributedSha256": "f7ad6f50953eaf28516c79466fb4bef44993a0c75988a2148c7453a9e7ed15c8"
     },
     {
       "schema": "i18n.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/i18n.schema.json",
+      "source": "metadata-schema/i18n.schema.json",
       "sourceSha256": "24a7ac84a557184496ddd5cc76624c85be40421f77d8d4437cd5c1f3b710b8af",
       "distributedSha256": "24a7ac84a557184496ddd5cc76624c85be40421f77d8d4437cd5c1f3b710b8af"
     },
@@ -118,37 +119,37 @@
     },
     {
       "schema": "menu.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/menu.schema.json",
+      "source": "metadata-schema/menu.schema.json",
       "sourceSha256": "d805c7aace5ef9e41f7fbe4c7804e30172aaf21599e4087f2a68b38d314089e4",
       "distributedSha256": "d805c7aace5ef9e41f7fbe4c7804e30172aaf21599e4087f2a68b38d314089e4"
     },
     {
       "schema": "micro-web.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/micro-web.schema.json",
+      "source": "metadata-schema/micro-web.schema.json",
       "sourceSha256": "cc31d3213d44637974c13b49536520a859b804e6467b5fe2f558cc451f708cd0",
       "distributedSha256": "cc31d3213d44637974c13b49536520a859b804e6467b5fe2f558cc451f708cd0"
     },
     {
       "schema": "modules-diff.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/modules-diff.schema.json",
+      "source": "metadata-schema/modules-diff.schema.json",
       "sourceSha256": "cf53af74bf26504916f5bf4882d4a684f78eb202c3d918a59f73049d56958477",
       "distributedSha256": "cf53af74bf26504916f5bf4882d4a684f78eb202c3d918a59f73049d56958477"
     },
     {
       "schema": "mq.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/mq.schema.json",
+      "source": "metadata-schema/mq.schema.json",
       "sourceSha256": "8de313df0fc566cd4988a16769b4daaf1faedda83cd4e354621e484717a426c8",
       "distributedSha256": "8de313df0fc566cd4988a16769b4daaf1faedda83cd4e354621e484717a426c8"
     },
     {
       "schema": "notification.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/notification.schema.json",
+      "source": "metadata-schema/notification.schema.json",
       "sourceSha256": "a33325f014894a3de0659a883820b5824a0a4b5453257e0c1fafb9ffe9f1f7b2",
       "distributedSha256": "a33325f014894a3de0659a883820b5824a0a4b5453257e0c1fafb9ffe9f1f7b2"
     },
     {
       "schema": "position.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/position.schema.json",
+      "source": "metadata-schema/position.schema.json",
       "sourceSha256": "ce354d19c53396939ccad4a69ebc5e0e207e3bab6530fb143409ca20ffc22f51",
       "distributedSha256": "ce354d19c53396939ccad4a69ebc5e0e207e3bab6530fb143409ca20ffc22f51"
     },
@@ -166,34 +167,37 @@
     },
     {
       "schema": "schedule.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/schedule.schema.json",
+      "source": "metadata-schema/schedule.schema.json",
       "sourceSha256": "b0d5ac3c0fc89c97d3fef7acb0f7105d8adb83b6a61854a83d977cc81a417563",
       "distributedSha256": "b0d5ac3c0fc89c97d3fef7acb0f7105d8adb83b6a61854a83d977cc81a417563"
     },
     {
       "schema": "ui-model.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/ui-model.schema.json",
+      "source": "metadata-schema/ui-model.schema.json",
       "sourceSha256": "3012ea203678a5591eccee12ed3e6a9624e15a218392fd1358ccd87c725bc9d4",
       "distributedSha256": "3012ea203678a5591eccee12ed3e6a9624e15a218392fd1358ccd87c725bc9d4"
     },
     {
+      "schema": "ui-schema-content.schema.json",
+      "source": "metadata-schema/ui-schema-content.schema.json",
+      "sourceSha256": "3ec5af67a4520ea0d68a0c45a887e8f1fdb1db5ffdcb6dd0ab8c404654ba97df",
+      "distributedSha256": "3ec5af67a4520ea0d68a0c45a887e8f1fdb1db5ffdcb6dd0ab8c404654ba97df"
+    },
+    {
       "schema": "ui-schema.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/ui-schema.schema.json",
-      "sourceSha256": "e1438d8233eeaed2633d5d7025c46498d146db768ad4835c1986eb6dda746540",
-      "distributedSha256": "63ad49a2e23ad96642b8af93c3b313a2d3b32ab7de0bf082766d0bf4379294cf",
-      "authoringSource": "skills/tidestack-metadata-definition/authoring/ui-schema.schema.json",
-      "reason": "Typed .ui-schema.json loader requires the name/schema resource envelope.",
-      "contentSchema": "skills/tidestack-metadata-definition/references/ui-schema-content.schema.json"
+      "source": "metadata-schema/ui-schema.schema.json",
+      "sourceSha256": "b82f2c78609c9e2547972383a566a7e8215c7d8db57ae14b1fbec880640a3236",
+      "distributedSha256": "b82f2c78609c9e2547972383a566a7e8215c7d8db57ae14b1fbec880640a3236"
     },
     {
       "schema": "webapi.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/webapi.schema.json",
-      "sourceSha256": "b58a7ae104da8562bcd17ca258beaa9acb58691fe1fe1bdc3ac4ebd64f0145ac",
-      "distributedSha256": "b58a7ae104da8562bcd17ca258beaa9acb58691fe1fe1bdc3ac4ebd64f0145ac"
+      "source": "metadata-schema/webapi.schema.json",
+      "sourceSha256": "4785f92cccb42b425ad5a16392963a30122af20e08d8fa6f9c955cfe3ce25e88",
+      "distributedSha256": "4785f92cccb42b425ad5a16392963a30122af20e08d8fa6f9c955cfe3ce25e88"
     },
     {
       "schema": "widget.schema.json",
-      "source": "docs/handbook/docs/reference/jsonschema/metadata/widget.schema.json",
+      "source": "metadata-schema/widget.schema.json",
       "sourceSha256": "f81f48409ae68aee4853f293e36c5eaa56f0a60ea1cc65f1c9853f4131a4d023",
       "distributedSha256": "f81f48409ae68aee4853f293e36c5eaa56f0a60ea1cc65f1c9853f4131a4d023"
     }

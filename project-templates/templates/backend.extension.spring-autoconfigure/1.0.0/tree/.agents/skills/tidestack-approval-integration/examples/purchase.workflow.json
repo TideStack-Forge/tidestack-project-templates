@@ -1,0 +1,66 @@
+{
+  "formatVersion": 1,
+  "name": "purchase",
+  "title": "采购审批",
+  "version": 1,
+  "enabled": true,
+  "form": {
+    "formType": "custom",
+    "formId": "purchase"
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "type": "StartNode",
+      "name": "发起",
+      "permission": [
+        {
+          "name": "amount",
+          "label": "采购金额",
+          "visible": true,
+          "writable": true,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "approve",
+      "type": "ApprovalNode",
+      "subType": "单签",
+      "name": "审批",
+      "candidates": [
+        {
+          "type": "Starter"
+        }
+      ],
+      "permission": [
+        {
+          "name": "amount",
+          "label": "采购金额",
+          "visible": true,
+          "writable": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "type": "EndNode",
+      "name": "结束"
+    }
+  ],
+  "edges": [
+    {
+      "id": "start-approve",
+      "type": "SEQUENCE",
+      "sourceId": "start",
+      "targetId": "approve"
+    },
+    {
+      "id": "approve-end",
+      "type": "SEQUENCE",
+      "sourceId": "approve",
+      "targetId": "end"
+    }
+  ]
+}

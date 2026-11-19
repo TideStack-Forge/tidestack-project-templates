@@ -1,0 +1,42 @@
+{
+  "formatVersion": 1,
+  "name": "purchase",
+  "title": "采购申请",
+  "description": "高代码采购业务的审批字段",
+  "fields": [
+    {
+      "name": "amount",
+      "label": "采购金额",
+      "description": "采购总金额，单位元",
+      "type": "定点数字",
+      "params": {
+        "size": 12,
+        "precision": 2
+      }
+    },
+    {
+      "name": "department",
+      "label": "申请部门",
+      "type": "单行文本"
+    },
+    {
+      "name": "purchaseType",
+      "label": "采购类型",
+      "type": "单选",
+      "params": {
+        "dataType": "String",
+        "size": 100,
+        "options": [
+          {
+            "value": "equipment",
+            "label": "设备"
+          },
+          {
+            "value": "consumable",
+            "label": "耗材"
+          }
+        ]
+      }
+    }
+  ]
+}

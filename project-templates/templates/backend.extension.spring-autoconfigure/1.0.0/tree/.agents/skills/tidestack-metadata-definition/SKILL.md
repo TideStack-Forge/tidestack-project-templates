@@ -1,15 +1,15 @@
 ---
 name: tidestack-metadata-definition
-description: 定义、检查或校验 TideStack（Ouroboros）元数据资源时使用，按文件名/后缀选择 31 类资源契约。统一维护模块、菜单、权限、UI Model、配置等字段及校验工具；完整模型、页面和流程开发使用对应任务 Skill。
+description: 定义、检查或校验 TideStack（Ouroboros）元数据资源时使用，按文件名/后缀选择 32 类资源契约。统一维护模块、菜单、权限、UI Model、配置等字段及校验工具；完整模型、页面和流程开发使用对应任务 Skill。
 ---
 
 # TideStack Metadata Definition
 
 ## Overview
 
-本 Skill 提供 31 类资源与统一校验器。Schema 从 dev-next 手册契约同步；来源、摘要和显式作者覆盖见 `references/schema-sources.json`，同步说明见[来源与加载](references/contracts.md)。authoring 下仅保留有明确运行时或编写理由的覆盖，不将所有差异当作错误直接覆盖。
+本 Skill 提供 32 类资源与统一校验器。Schema 统一从平台公共 `metadata-schema/` 分发，来源与摘要见 `references/schema-sources.json`，维护和加载边界见[来源与加载](references/contracts.md)。手册、IDE 与项目模板使用同源契约。
 
-源码放 `src/main/metadata/`，打包到 `META-INF/ouroboros/metadata/`。有对应 Schema 不等于目标应用装配了 runtime、provider 或 handler；结构、加载、引用和实际行为分别检查。
+源码放 `src/main/metadata/`，打包到 `META-INF/ouroboros/metadata/`。有对应 Schema 不等于目标应用装配了 runtime、provider 或 handler；结构、加载、引用和实际行为分别检查。新增普通业务资源沿现有加载路径交付，不自行实现 provider 或 loader。
 
 Keep this skill as the one place for file-type routing. Do not split new metadata types into one skill per suffix unless the type needs a large dedicated workflow or executable tool.
 
@@ -20,6 +20,7 @@ Keep this skill as the one place for file-type routing. Do not split new metadat
 | `*.business.json` | `business` | 业务模型 | 后端开发 | `references/business.schema.json` |
 | `*.logicflow.json` | `logicflow` | 逻辑流模型 | 后端开发 | `references/logicflow.schema.json` |
 | `*.workflow.json` | `approval-workflow` | 审批流资源元数据 | 后端开发 | `references/approval-workflow.schema.json` |
+| `*.approval-form.json` | `approval-form` | 自定义审批表单描述 | 后端开发 | `references/approval-form.schema.json` |
 | `app-modules.json` | `app-module` | 应用模块集合 | 后端开发 | `references/app-module.schema.json` |
 | `*.menu.json` | `menu` | 运行态菜单 | 后端开发 | `references/menu.schema.json` |
 | `*.dev-menu.json` | `dev-menu` | 开发态菜单 | 平台扩展开发 | `references/dev-menu.schema.json` |
@@ -79,7 +80,9 @@ Keep this skill as the one place for file-type routing. Do not split new metadat
 
 完整校验使用本 Skill 的 Python Draft202012Validator；在隔离环境安装 `scripts/requirements.txt`。缺依赖退出 2，不静默降级。Python/Node 的 `--subset` 只做显式请求的子集检查，不是完整门禁。审批图语义与部署仍由正式 codec 和引擎验证。
 
-权限/模块/菜单/UI Model 的组合见[业务入口](../tidestack-business-entry-definition/SKILL.md)，字典、初始化、配置、错误码和 i18n 见[支撑资源](references/supporting-resources.md)。
+权限/模块/菜单/UI Model 的组合见[业务入口](../tidestack-business-entry-definition/SKILL.md)，字典的维护归属与刷新、初始化的新增语义、配置的实际消费、错误码和 i18n 见[支撑资源](references/supporting-resources.md)。
+
+自定义审批表单：应用元数据放 `approval-form/{name}.approval-form.json`；模块放 `src/main/metadata/approval-form/`，打包到 `META-INF/ouroboros/metadata/approval-form/`。必填 `formatVersion: 1`、稳定的 `name`、展示 `title`、`fields`。字段使用 `name/label/type`，可带 `description/params`；`params` 是现有字段类型参数，不是实例数据。流程使用 `form: {formType: "custom", formId: "<name>"}` 引用，节点权限和条件保存在流程中。Schema 检查结构，平台负责名称判重、类型编译和引用校验，不能只凭 Schema 通过声称可部署。使用例见[审批接入](../tidestack-approval-integration/SKILL.md)。
 
 ## Validation
 

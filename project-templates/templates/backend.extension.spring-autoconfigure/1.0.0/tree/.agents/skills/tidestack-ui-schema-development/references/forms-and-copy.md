@@ -10,6 +10,8 @@
 | dialog/drawer | 核对目标基座是否已自动去包裹；按实际结果避免重复容器，核对宿主动作与 form 提交的绑定 |
 | 自定义内联表单或手工动作区 | 仅在 actions 有明确宿主和提交目标时去包裹，验证提交、校验和失败状态 |
 
+当前基座会对 dialog/drawer 内的 form 规范容器，并将表单动作接入宿主动作区。通常保留 form 的正常声明即可；`updateActions: false` 会关闭这一路径的自动动作处理，只有明确自行管理动作时使用，并核对保存、校验与关闭行为。
+
 不能全局替换 `wrapWithPanel: false`。某些 form 渲染路径在去掉 panel 后不会渲染原 panel footer 中的 actions。`title: ""` 与移除包裹的语义不同；先检查目标 AMIS 版本和基座转换，再调整。
 
 ## 描述与帮助文字
