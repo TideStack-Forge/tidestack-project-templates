@@ -42,8 +42,8 @@
     {
       "schema": "business.schema.json",
       "source": "metadata-schema/business.schema.json",
-      "sourceSha256": "0013118a9df5bb9c138b714f327a0d48200f6e9b259792f1743ae3619c3f498e",
-      "distributedSha256": "0013118a9df5bb9c138b714f327a0d48200f6e9b259792f1743ae3619c3f498e"
+      "sourceSha256": "3319e6c52e21ec9192d246f5f7777f901feb2dbd3d1fd404e1c631cc5727a8a3",
+      "distributedSha256": "3319e6c52e21ec9192d246f5f7777f901feb2dbd3d1fd404e1c631cc5727a8a3"
     },
     {
       "schema": "configuration-group-item.schema.json",
@@ -162,8 +162,8 @@
     {
       "schema": "rpc.schema.json",
       "source": "metadata-schema/rpc.schema.json",
-      "sourceSha256": "21d4332abaa213fd335ec6a49db1ae1ba493a89230b241561bb995197cae2a7c",
-      "distributedSha256": "21d4332abaa213fd335ec6a49db1ae1ba493a89230b241561bb995197cae2a7c"
+      "sourceSha256": "c9841a936f5f61f1f1f9f2f25e15e1f09acea9cf9ad1c1fe4bccc9917ed5b26d",
+      "distributedSha256": "c9841a936f5f61f1f1f9f2f25e15e1f09acea9cf9ad1c1fe4bccc9917ed5b26d"
     },
     {
       "schema": "schedule.schema.json",

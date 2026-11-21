@@ -12,8 +12,15 @@
   ],
   "properties": {
     "group": {
-      "type": "string",
-      "description": "按外部系统或用途组织 RPC 模型的分组。"
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "按外部系统或用途组织 RPC 模型的可选分组；使用 / 分隔层级，例如 钉钉/通讯录。保存完整可读路径，不使用分类 ID；空值表示未分组，各层级会去除首尾空白且不能为空。",
+      "examples": [
+        "钉钉/通讯录",
+        "业务/订单"
+      ]
     },
     "name": {
       "type": "string",
@@ -64,7 +71,12 @@
         "integer",
         "string"
       ],
-      "description": "重试次数，允许 #{key} 配置引用，解析结果必须为整数。"
+      "description": "重试次数上限，允许 #{key} 配置引用；仅 retrySafe=true 时允许重放。"
+    },
+    "retrySafe": {
+      "type": "boolean",
+      "default": false,
+      "description": "接口定义的静态安全重放合同。仅明确只读或具备官方稳定幂等保证时设为 true；不支持表达式、配置引用或调用选项覆盖。"
     }
   },
   "$comment": "Source: ability/ouroboros-rpc-model/ouroboros-rpc-model-core/src/main/java/com/ouroboros/rpc/metadata/RPCModelMetadata.java"
